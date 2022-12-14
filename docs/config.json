@@ -1,8 +1,8 @@
 {
-    "title": "SUPPORT.IO",
-    "tagline": "drupal support",
+    "title": "ALEXCROM.IO",
+    "tagline": "Enthusiastic about Cyber Security open source and more ...",
     "author": "Alex Crom",
-    "image": "app.png",
+    "image": "../img/logo.png",
     "languages": { 
         "en": "English",
         "nl": "Nederlands"
