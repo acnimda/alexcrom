@@ -2,14 +2,14 @@ h1 {
     color: orange;
 }
 p {
-    color: orange !important;
+    color: darkorange !important;
 }
-a {
-    color: darkorchid;
+
+.lead.text-muted {
+    color: salmon !important;
 }
-.text-muted {
-    color: lavenderblush;
-}
+
+
 
 
 
