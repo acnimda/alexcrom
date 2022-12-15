@@ -24,5 +24,5 @@ p {
 }
 
 .card {
-    border: .18rem solid coral;
+    border: .18rem solid coral !important;
 }
