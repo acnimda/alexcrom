@@ -12,6 +12,8 @@ Sindsdien heb ik hard gewerkt om mijn vaardigheden te verfijnen en ben ik gecert
 
 Ik ben nu op zoek naar een nieuwe uitdaging en enthousiast om mijn vaardigheden te gebruiken om bedrijven te helpen hun systemen te testen tegen cyberdreigingen met als doel om ervoor te zorgen dat hun data veilig en beschermd blijft.
 
+## About you
+
 Ben jij het bedrijf dat net zo gepassioneerd is over Ethical Hacking als ik, neem dan [contact](https://acnimda.github.io/alexcrom/) op!
 
 Tot snel ...
