@@ -2,7 +2,7 @@ h1 {
     color: orange;
 }
 p {
-    color: darkorange !important;
+    color: coral !important;
 }
 
 .lead.text-muted {
@@ -21,4 +21,8 @@ p {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
     }
+}
+
+.card {
+    border: .18rem solid coral;
 }
