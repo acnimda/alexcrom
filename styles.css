@@ -1,7 +1,10 @@
+
 h1 {
+    font-family: 'Monospace', sans-serif;
     color: orange;
 }
 p {
+    font-family: 'Roboto mono', Monospace;
     color: coral !important;
 }
 
