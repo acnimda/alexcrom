@@ -31,7 +31,7 @@ wget https://arjenwiersma.nl/c/2/79586af7a20d63e149b0852dfa076139-challenge.png
 
 
 
-## Part 1
+## Part :one:
 what file are we looking at?
 With a tool like `hexdump` we can find the magic bytes of the file. We can use  tools like `file` instead. 
 
@@ -96,11 +96,12 @@ Song played from tape
 (Monty Python song) 
 ```
 
-Manually I tried with stegosuite:
+Manually we can try the whole list typing in stegosuite or write a bruteforce script to do so.
+For me this worked as followed:
 1. Always Look on the Bright Side of Life
 2. Hellowed by the name
 
-The second phrase is a hit:
+The second phrase is a :dart:.
 ```sh
 stegosuite -d -x  79586af7a20d63e149b0852dfa076139-challenge.png -k "Hallowed Be Thy Name"
 ```
@@ -117,7 +118,7 @@ BADGE{St3gan0graphy
 
 
 
-## Part 2
+## Part :two:
 
 a `pngcheck` leads to additional data after `IEND chunk`
 ```sh
@@ -142,7 +143,7 @@ or in ascii text:
 .U38.2:.I,D]
 ```
 
-solving the second part could be done bij cyberchef or a `pyton3` script `badge.py`:
+solving the second part could be done trough cyberchef or a `pyton3` script `badge.py`:
 
 ### Firstly the python way 2 go
 the previous founded hex `17 55 33 38 07 32 3a 13  49 2c 44 5d` is used as a key and the string `"Hallowed Be Thy Name"`.
