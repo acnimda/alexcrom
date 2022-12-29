@@ -1,5 +1,16 @@
-## :bowtie: TL:DR :scroll:
-Find the flag in a `png` file with stegonagry methods.
+# Badge Challenge 2
+## Synopsis
+User [credmp](https://github.com/credmp) created a badge Challenge and therefore used steganography methods. Files and text were hidden in a `PNG` file.
+The url is provided trough a QR code which could be scanned at the HTB meetup of 2022/12/21 (y/m/d/).
+
+These hints were given during the challenge by user credmp.
+
+1. looking for a pass phrase
+2. The image contains 3 elements; something you will need at the end, something you can osint and something within. If there are no solves by Sunday I will provide a Christmas hint.
+
+
+## :scroll: TL:DR :scroll:
+Find the flag in a `png` file with steganography methods.
 tools used:
 1. kali linux
 2. hexdump:   `hexdump -C -n 8 79586af7a20d63e149b0852dfa076139-challenge.png`
@@ -9,13 +20,8 @@ tools used:
 6. stegosuite v0.8.0-2
 7. cyberchef or python3: `XOR` the hex `17 55 33 38 07 32 3a 13  49 2c 44 5d` with the text `Hallowed Be Thy Name`.
 
-These hints were given during the challenge by user credmp.
 
-1. looking for a pass phrase
-2. The image contains 3 elements; something you will need at the end, something you can osint and something within. If there are no solves by Sunday I will provide a Christmas hint.
-
-The url is provided trough a QR code which could be scanned at the HTB meetup of 21 december 2022.
-
+## :rocket: Getting Started :rocket:
 First we create a folder and we download this image:
 ![[79586af7a20d63e149b0852dfa076139-challenge]](../img/79586af7a20d63e149b0852dfa076139-challenge.png)
 ```sh
@@ -181,7 +187,7 @@ BADGE{St3gan0graphy_4_ThE_win!}
 3. Check your software versions. 
 4. Set a timer :hourglass:, and get out your :rabbit:hole!
 
-### out of scope :shit:
+### out of scope :bowtie:
 Where `79586af7a20d63e149b0852dfa076139` does look odd for a name of an image we could have checked it.
 Which I actually did. :warning: this was one of my :rabbit:holes!
 

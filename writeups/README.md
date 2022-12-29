@@ -1,4 +1,4 @@
-## Writeups :memo: :pencil:
+## Writeups :memo:
 
 Hi there!
 
