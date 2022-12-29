@@ -6,8 +6,8 @@ hints are given by user credmp.
 The url is provided trough a QR code which could be scanned at the HTB meetup of 21 december 2022.
 
 First we create a folder and we download this image:
-![[79586af7a20d63e149b0852dfa076139-challenge.png]]
-```
+![[79586af7a20d63e149b0852dfa076139-challenge]](../img/79586af7a20d63e149b0852dfa076139-challenge.png)
+```sh
 mkdir badge2
 wget https://arjenwiersma.nl/c/2/79586af7a20d63e149b0852dfa076139-challenge.png
 ```
@@ -25,7 +25,7 @@ tools used:
 
 ## Part 1
 what file are we looking at?
-With a tool like [[hexdump]] we can find the magic bytes of the file. We can use  tools like [[file]]  instead. 
+With a tool like `hexdump` we can find the magic bytes of the file. We can use  tools like `file` instead. 
 
 ```sh
 hexdump -C -n 8 79586af7a20d63e149b0852dfa076139-challenge.png
@@ -39,7 +39,7 @@ hexdump output: it seems to be a PNG file.
 ### stegosuite
 Stegonagrafy is a method to hide something in an image, this could be text, audio files, other images or scripts.
 
-For this challenge we need to download [stegosuite]([http://ftp.de.debian.org/debian/pool/main/s/stegosuite/stegosuite_0.8.0-2_all.deb](http://ftp.de.debian.org/debian/pool/main/s/stegosuite/stegosuite_0.8.0-2_all.deb "http://ftp.de.debian.org/debian/pool/main/s/stegosuite/stegosuite_0.8.0-2_all.deb")) version 0.8.0-2 and install it `dpkg -i stegosuite_0.8.0-2_all.deb`.
+For this challenge we need to download a specific [stegosuite](http://ftp.de.debian.org/debian/pool/main/s/stegosuite/stegosuite_0.8.0-2_all.deb) version 0.8.0-2 and install it `dpkg -i stegosuite_0.8.0-2_all.deb`.
 
 
 We need a phrase for `stegosuite`  and therefore we need a little bit of OSINT.
@@ -171,9 +171,6 @@ BADGE{St3gan0graphy_4_ThE_win!}
 ```
 
 
-
-
-
 ## :old_key:NOTES: 
 
 ### Lessens learned
@@ -181,4 +178,18 @@ BADGE{St3gan0graphy_4_ThE_win!}
 2. XOR use a key instead of always bruteforce 
 3. Check your software versions. 
 4. Set a timer, and get out your rabbithole!
+
+### out of scope
+Where `79586af7a20d63e149b0852dfa076139` does look odd for a name of an image we could have checked it.
+Which I actually did. :warning: this was a rabbithole!
+
+a check with `hashid 79586af7a20d63e149b0852dfa076139` results in a possible MD5 hash.
+with `hascat` and a wordlist like `rockyou.txt` you might crack the hash.
+
+```shell
+hashcat -m 0 hash /usr/share/wordlists/rockyou.txt
+```
+
+
+
 
