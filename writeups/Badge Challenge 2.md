@@ -162,7 +162,7 @@ recipe:
 1. from hex auto
 2. XOR with key: Hallowed Be Thy Name `UTF8`
 
-  ![[XOR_bagde2.png]]
+  ![XOR_bagde2](../img/XOR_bagde2.png)
 
 ## Wrap it up!
 output:
