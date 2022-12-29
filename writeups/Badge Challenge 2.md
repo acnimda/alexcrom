@@ -1,4 +1,15 @@
-hints are given by user credmp.
+## :bowtie: TL:DR :scroll:
+Find the flag in a `png` file with stegonagry methods.
+tools used:
+1. kali linux
+2. hexdump:   `hexdump -C -n 8 79586af7a20d63e149b0852dfa076139-challenge.png`
+3. OSINT `google` setlist phrase `Hallowed Be Thy Name`
+4. pngcheck : `pngcheck -v 79586af7a20d63e149b0852dfa076139-challenge.png` 12 bytes after IEND
+5. zsteg:  `zsteg -a -v encoded-inner.png`
+6. stegosuite v0.8.0-2
+7. cyberchef or python3: `XOR` the hex `17 55 33 38 07 32 3a 13  49 2c 44 5d` with the text `Hallowed Be Thy Name`.
+
+These hints were given during the challenge by user credmp.
 
 1. looking for a pass phrase
 2. The image contains 3 elements; something you will need at the end, something you can osint and something within. If there are no solves by Sunday I will provide a Christmas hint.
@@ -12,16 +23,7 @@ mkdir badge2
 wget https://arjenwiersma.nl/c/2/79586af7a20d63e149b0852dfa076139-challenge.png
 ```
 
-## TL:DR
-Find the flag in a `png` file with stegonagry methods. 
-tools used:
-1. kali linux
-2. hexdump:   `hexdump -C -n 8 79586af7a20d63e149b0852dfa076139-challenge.png`
-3. OSINT `google` setlist phrase `Hallowed Be Thy Name`
-4. pngcheck : `pngcheck -v 79586af7a20d63e149b0852dfa076139-challenge.png` 12 bytes after IEND
-5. zsteg:  `zsteg -a -v encoded-inner.png`
-6. stegosuite v0.8.0-2
-7. cyberchef or python3
+
 
 ## Part 1
 what file are we looking at?
@@ -173,15 +175,15 @@ BADGE{St3gan0graphy_4_ThE_win!}
 
 ## :old_key:NOTES: 
 
-### Lessens learned
+### :mortar_board: Lessens learned
 1. do re-use collected wordlists
 2. XOR use a key instead of always bruteforce 
 3. Check your software versions. 
-4. Set a timer, and get out your rabbithole!
+4. Set a timer :hourglass:, and get out your :rabbit:hole!
 
-### out of scope
+### out of scope :shit:
 Where `79586af7a20d63e149b0852dfa076139` does look odd for a name of an image we could have checked it.
-Which I actually did. :warning: this was a rabbithole!
+Which I actually did. :warning: this was one of my :rabbit:holes!
 
 a check with `hashid 79586af7a20d63e149b0852dfa076139` results in a possible MD5 hash.
 with `hascat` and a wordlist like `rockyou.txt` you might crack the hash.
