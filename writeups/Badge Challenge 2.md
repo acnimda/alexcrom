@@ -196,9 +196,19 @@ a check with `hashid 79586af7a20d63e149b0852dfa076139` results in a possible MD5
 with `hascat` and a wordlist like `rockyou.txt` you might crack the hash.
 
 ```shell
-hashcat -m 0 hash /usr/share/wordlists/rockyou.txt
+sudo hashcat -a 0 -m 0 -o crackedpassword.txt \ '79586af7a20d63e149b0852dfa076139' \ 
+/usr/share/wordlists/rockyou.txt
 ```
 
+there where two candidates found:
+1. Candidates.#1....: `$HEX[206b72697374656e616e6e65]`
+2. Candidates.#2....: `$HEX[042a0337c2a156616d6f732103]`
 
+These candidates where compiled with some magic from cybercef
+where the outcome was:
+1. `206b72697374656e616e6e65` —> kristenanne
+2. `042a0337c2a156616d6f732103` —> .*.7¡Vamos!.
+
+ Due to the outcome this was a perfect decoy where I spent most of my time with.
 
 
