@@ -3,9 +3,9 @@ Remote Code Execution vulnerability in apache Log4j2 ≤= 2.14.1
 
 Allows attackers to execute arbitrary system command by loading code from an attacker-controlled LDAP server via the Java Naming Directory Interface JNDI reported by [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228)
 
-## TL:DR
+## :scroll: TL:DR :scroll:
 find **user** and **root flag** trough remote code execution. Therefore use this  [exploit](https://github.com/pimps/JNDI-Exploit-Kit/) and setup `netcat` using kali linux as our OS.  
-## getting started
+## :rocket: getting started :rocket:
 We add the `domain` and `ip` to `/etc/hosts` .
 ```
 echo "10.10.69.123 metabase.htb" | sudo tee -a /etc/hosts
@@ -63,4 +63,13 @@ cat /etc/default/metabase
 MB_DB_PASS=fHj3sxZ0.f
 ```
 
+## Wrap it up!
 The rootflag is found in `root/root.txt`
+
+
+## :old_key:NOTES:
+
+### :mortar_board: Lessens learned
+1. JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints.
+2. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled.
+3. Make proper notes, I did not make all the notes carefully :bowtie:
