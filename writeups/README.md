@@ -3,7 +3,7 @@
 Hi there!
 
 Welcome on my write up page.
-## ![](https://www.hackthebox.com/images/logo-htb.svg)**Hack**the**box**
+## ![](https://www.hackthebox.com/images/logo-htb.svg)
 [Log4shell](Log4shell.md)
 
 ## badge Challenge
