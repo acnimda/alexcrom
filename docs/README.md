@@ -1,10 +1,14 @@
 ## About me
 
-Vanaf 2023  naar een *nieuwe uitdaging* en wil me verder professioneel ontwikkelen in de functie van **Junior Ethical Hacker** en ben op zoek naar nieuwe uitdagingen om mijn vaardigheden verder te ontwikkelen en te verbeteren! 
+Vanaf 2023 ben ik opzoek naar een *nieuwe uitdaging* voor een functie in de cyber security!
 
-Mijn ervaring met hacken begon in 2022. Na het afronden van de bootcamp, medio 2023, ben ik gecertificeerd als [Ethical Hacker](https://www.novi.nl/ethical-hacker/) door NOVI hogeschool. 
+Ook ben ik gedreven om nieuwe vaardigheden te leren en andere vaardigheden door te ontwikkelen. 
 
-Ik ben opzoek naar een nieuwe uitdaging, kan jij me verder helpen? 
+Mijn ervaring met cyber security begon in 2022.
+Na het afronden van de bootcamp, medio 2023,
+ben ik gecertificeerd als [Ethical Hacker](https://www.novi.nl/ethical-hacker/) door NOVI hogeschool. 
+
+Kan jij me verder helpen? 
 
 ## About you
 
