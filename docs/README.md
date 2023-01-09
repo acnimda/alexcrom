@@ -1,8 +1,8 @@
-## About me
+## :man: About me :man:
 
-Vanaf 2023 ben ik opzoek naar een *nieuwe uitdaging* voor een functie in de cyber security!
+Vanaf 2023 ben ik opzoek naar een ***nieuwe uitdaging*** voor een functie in de **cyber security!**
 
-Ook ben ik gedreven om nieuwe vaardigheden te leren en andere vaardigheden door te ontwikkelen. 
+Ook ben ik erg gedreven om nieuwe vaardigheden te leren en andere vaardigheden door te ontwikkelen. 
 
 Mijn ervaring met cyber security begon in 2022.
 Na het afronden van de bootcamp, medio 2023,
