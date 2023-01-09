@@ -7,11 +7,10 @@ Ook ben ik erg gedreven om nieuwe vaardigheden te leren en andere vaardigheden d
 Met een achtergrond in de gezondheidszorg ben ik nu geïnteresseerd in het domein van de cyber security.
 
 mijn sterkste punten zijn: 
-- Samenwerken;
-- communicatie skills;
-- analytische vaardigheden;
+- Communicatie skills;
+- Analytische vaardigheden;
 - Gedrevenheid;
-- gecombineerd met een gezonde dosis humor :smile:.
+- Gecombineerd met een gezonde dosis humor :smile:.
 
 Mijn ervaring met cyber security begon in 2022.
 Na het afronden van de bootcamp, medio 2023,
