@@ -11,12 +11,12 @@ We add the `domain` and `ip` to `/etc/hosts` .
 After we spawn a machine we get an ip adress.
 ![ip](../img/blue_ip.png)
 	This ip adress we can add to our `/etc/hosts` file:
-```
+```sh
 echo "10.129.231.168 blue.htb" | sudo tee -a /etc/hosts
 ```
-## :scan: Enumeration :scan:
+## Enumeration
 As we start with a `nmap` scan 
-```hs
+```sh
 nmap -sV -sC -oA blue blue.htb
 ```
 
@@ -31,8 +31,6 @@ nmap --script smb-vuln-ms17-010 -p445 blue.htb
 it revails a vulnerability called `ms17-010` in Microsoft `SMBv1` accorring to **CVE-2017-0143**. 
 ### msfconsole
 With `msfconsole` we can search for an exploit.
-
-```sh
 
 
 ## Expliotation
