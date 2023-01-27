@@ -3,38 +3,40 @@
 
 ## :scroll: TL:DR :scroll:
 Get **Privilege Escalation** on a **windows 7 Porfessional 7601 Service Pack 1 computer**.
-Therfore find exploit `ms17-010` and run it. 
-Take control over the windows computer and find user- en rootflag.
+Therefore find exploit `ms17-010` and run it. 
+Take control over the windows computer and find user- en root:flags:.
  
 ## :rocket: Getting started :rocket:
-We add the `domain` and `ip` to `/etc/hosts` .
-After we spawn a machine we get an ip adress.
+We spawn the machine by clicking the button 
+
 ![ip](../img/blue_ip.png)
-	This ip adress we can add to our `/etc/hosts` file:
+
+
+and add the given `ip` to our `/etc/hosts` file:
 ```sh
 echo "10.129.231.168 blue.htb" | sudo tee -a /etc/hosts
 ```
 ## Enumeration
-As we start with a `nmap` scan 
+We start as always with a `nmap` scan 
 ```sh
 nmap -sV -sC -oA blue blue.htb
 ```
+wich result in a interesting open port:
 
 ![port 445 scan](../img/blue_port_445.png)
 
 
+If we scan the port on vulernabilities
 
 ```sh
 nmap --script smb-vuln-ms17-010 -p445 blue.htb
 ```
 ![nmap vulnerability scan](../img/blue_nmap_ms17-010.png)
 it revails a vulnerability called `ms17-010` in Microsoft `SMBv1` accorring to **CVE-2017-0143**. 
-### msfconsole
-With `msfconsole` we can search for an exploit.
 
 
 ## Expliotation
-
+With `msfconsole` we can search for an exploit:
 
 1. type `msfconsole` to start metasploit;
 2. `search ms17-010`;
