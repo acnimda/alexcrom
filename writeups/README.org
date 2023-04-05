@@ -7,7 +7,10 @@ Hi there!
 
 Welcome on my write up page.
 [[https://www.hackthebox.com/images/logo-htb.svg]]
-[[log4shell.org]]
+
+[[Log4shell.org]]
+
+
 [[Blue.org]]
 
 * Badge Challenge
