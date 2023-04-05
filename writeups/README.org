@@ -1,12 +1,15 @@
-## Writeups :memo:
+#+title: Writeups
+#+author: Alex Crom
+
+* :memo: Writeups
 
 Hi there!
 
 Welcome on my write up page.
-## ![](https://www.hackthebox.com/images/logo-htb.svg)
-[Log4shell](Log4shell.md)
+[[https://www.hackthebox.com/images/logo-htb.svg]]
+[[Log4shell]]
+[[Blue]]
 
-[Blue](Blue.md)
+* Badge Challenge
 
-## badge Challenge
-[Badge Challenge 2](Badge%20Challenge%202.md)
+[[Badge_Challenge_2]]

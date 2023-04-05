@@ -7,7 +7,7 @@ Take control over the windows computer and find user- en root:flags:.
 Therefore find exploit ms17-010 and run it.
 
 ** :scroll: TL:DR
-Get *Privilege Escalation* on a /*windows 7 Porfessional 7601 Service Pack 1 computer*/.
+Get *Privilege Escalation* on a *windows 7 Porfessional 7601 Service Pack 1 computer*.
 
 * :rocket: Getting started
 We spawn the machine by clicking the button 
