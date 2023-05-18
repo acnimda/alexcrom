@@ -1,13 +1,13 @@
-#+title: Htb Cheat Sheet
+#+title: :sunglasses: Htb Cheat Sheet
 #+author: Alex Crom
 
-* shell upgrade
+* :rocket: shell upgrade
 #+begin_src bash
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 #+end_src
 
-* linpeas
+* :bowtie: linpeas
 get linpeas:
 #+begin_src bash
 curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh > sh
