@@ -1,5 +1,7 @@
-#+title: :sunglasses: Htb Cheat Sheet
+# #+title: Htb Cheat Sheet
 #+author: Alex Crom
+* :sunglasses: cheatsheet
+makes life more easy
 
 * :rocket: shell upgrade
 #+begin_src bash
@@ -12,3 +14,9 @@ get linpeas:
 #+begin_src bash
 curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh > sh
 #+end_src
+
+* SSTI
+[[https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#server-side-template-injection][SSTI]]
+
+** :nerd_face: WTF?
+Template injection allows an attacker to include template code into an existing (or not) template. A template engine makes designing HTML pages easier by using static template files which at runtime replaces variables/placeholders with actual values in the HTML pages
