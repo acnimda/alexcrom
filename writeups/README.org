@@ -13,7 +13,6 @@ Welcome on my write up page.
 
 [[Blue.org]]
 
-* Badge Challenge
+* Challenge
 
-[[Badge_Challenge_2.org]]
-
+[[hack_challenge.org]]
