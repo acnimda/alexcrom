@@ -17,9 +17,3 @@ Welcome on my write up page.
 
 [[Badge_Challenge_2.org]]
 
-* demo
-wat is = =dit dus=
-
-#+BEGIN_EXAMPLE
-  ddev export-db > db/[create a name].sql.gz
-#+END_EXAMPLE
