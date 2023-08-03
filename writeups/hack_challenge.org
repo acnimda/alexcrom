@@ -52,36 +52,3 @@ voorbeeld:
 BADGE{Z13t_Er_0nG3ve3r_Zo_U1t}
 
 #+end_src
-
-
-** :mortar_board: Lessens learned :noexport:
-1. do re-use collected wordlists
-2. XOR use a key instead of always bruteforce 
-3. Check your software versions. 
-4. Set a timer :hourglass:, and get out your :rabbit:hole!
-
-*** out of scope :bowtie:
-Where ~79586af7a20d63e149b0852dfa076139~ did look odd for a name of an image we could have checked it.
-Which I actually did. :warning: this was one of my :rabbit:holes!
-
-a check with ~hashid 79586af7a20d63e149b0852dfa076139~ results in a possible MD5 hash.
-with ~hascat~ and a wordlist like ~rockyou.txt~ you might crack the hash.
-
-#+begin_src bash
-sudo hashcat -a 0 -m 0 -o crackedpassword.txt \ '79586af7a20d63e149b0852dfa076139' \
-/usr/share/wordlists/rockyou.txt
-
-#+end_src
-
-there where two candidates found:
-1. Candidates.#1....: `$HEX[206b72697374656e616e6e65]`
-2. Candidates.#2....: `$HEX[042a0337c2a156616d6f732103]`
-
-These candidates where compiled with some magic from cybercef
-where the outcome was:
-1. `206b72697374656e616e6e65` —> kristenanne
-2. `042a0337c2a156616d6f732103` —> .*.7¡Vamos!.
-
- Due to the outcome this was a perfect decoy where I spent most of my time with.
-
-
