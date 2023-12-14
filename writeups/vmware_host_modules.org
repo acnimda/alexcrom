@@ -1,0 +1,16 @@
+#+title: VMware Host Modules
+** Update
+Wanneer je geen internet verbinding meer hebt in VMware en je gebruikt linux probeer dan dit script:
+#+begin_src bash
+
+# clone repo
+cd
+rm -rf vmware-host-modules.git
+git clone https://github.com/mkubecek/vmware-host-modules.git
+cd vmware-host-modules
+echo 'Welke VMware versie heb je gedownload?\n example:\n 17.5.0?'
+read V
+git checkout workstation-$V # select the one you have
+make
+make install
+#+end_src
